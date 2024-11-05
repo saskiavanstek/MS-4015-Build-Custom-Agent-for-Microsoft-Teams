@@ -23,10 +23,12 @@ First, you need to ...
 1. In the search box type in **azure openai** and press enter.
 1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press the **Create** button.
 1. Under the page **Create Azure OpenAI** set the following fields:
+   
    a. **Subscription** leave as the default value.
    b. **Resource Group** : Press the dropdown and select the Resource Group option that already exists.
    c. **Name** : Type in any name you choose.
    d. **Pricing tier**: Select the default value **Standard S0**.
+   
 Select **Next**.
 1. Under the next page, in the **Network** tab, Select the option **All networks, incluing the internet, can access this resource.**
 Select **Next**.
