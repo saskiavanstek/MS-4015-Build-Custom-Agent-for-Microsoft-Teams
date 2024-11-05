@@ -55,17 +55,22 @@ Now let's, ...
 6. In the **Chat playground** page, select **Add your data** located near the bottom of the screen > **+ Add a data source**.
 7. In the **Select or add data source** window, select  the dropdown for **Select data source** and select **Upload files (preview)**.
 8. In the next page for **Data source**, ensure the dropdown for **Select data source** is set to **Upload files (preview)**
-       a. In the **Subscription** field, ensure the default value is selected.
-       b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resouurce will take a moment to deploy.
-       c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
-9. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**. Select a **Service name**> Ensure all fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will takea moment to deploy.
-10. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 4 above.
-11. Enter a name for the field **Enter the index name** > **Next**
-12. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
-13. Under the **Data management** section, leave everything as default and select **Next**.
-14. Under the**Data connection** select **API key** > **Next** > **Save and close**.
-15. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
-16. In the **Sample code** window select the drop down to the right of the first field and select **json**> switch to the **Key authentification**tab:
+   
+   a. In the **Subscription** field, ensure the default value is selected.
+   
+    b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resouurce will take a moment to deploy.
+   
+   c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
+   
+10. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**. Select a **Service name**> Ensure all fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will takea moment to deploy.
+11. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 4 above.
+12. Enter a name for the field **Enter the index name** > **Next**.
+13. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
+14. Under the **Data management** section, leave everything as default and select **Next**.
+15. Under the**Data connection** select **API key** > **Next** > **Save and close**.
+16. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
+17. In the **Sample code** window select the drop down to the right of the first field and select **json**> switch to the **Key authentification**tab:
+    
     a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks. 
 
        
