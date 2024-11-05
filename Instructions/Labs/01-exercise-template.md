@@ -113,14 +113,14 @@ Now let's, ...
 
    a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
 
-   b. **index_name**  is the **Index name** from step 12 in the previous task.
+   b. **index_name**  is the **Index name** from step 11 in the previous task.
 
    c. **key** is the **Azure Search Resource Key** from the previous task.
 
-9.Go to **src/app/app.js file** and add the following variable inside **OpenAIModel** right after the line azureEndpoint: config.azureOpenAIEndpoint, : 
+8. Go to **src/app/app.js file** and add the following variable inside **OpenAIModel** right after the line azureEndpoint: config.azureOpenAIEndpoint, : 
 
     a. azureApiVersion: '2024-02-15-preview', 
     
-10. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
-11.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. 
-12. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
+9. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
+10.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. 
+11. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
