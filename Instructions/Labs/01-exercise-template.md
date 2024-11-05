@@ -34,7 +34,7 @@ First, you need to ...
    
 Select **Next**.
 
-6. Under the next page, in the **Network** tab, Select the option **All networks, incluing the internet, can access this resource.**
+6. Under the next page, in the **Network** tab, Select the option **All networks, including the internet, can access this resource.**
 Select **Next**.
 7. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
 Select **Next**.
@@ -43,13 +43,32 @@ Select **Next**.
 10. **Result:** You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
 
 
-## Next task
+## Deploy a Chat model
 
 Now let's, ...
 
-1. Step 1
-1. Step 2
-1. etc.
+1. In the page for your newley created Azure OpenAI resource, click **Go to Azure OpenAI Studio** in the ribbon at the top of the page.
+2. In the new page titled **Welcome to Azure OpenAI service**, click on **Chat** on the navigation menu to the left of the screen.
+3. In the new page titled **Chat playground**, under **Setup**, select **+ Create new deployment** > **From base models**.
+4. In the pop up window titled **Select a chat completion model** scroll down and select the option **gpt-4o** > **Confirm**.
+5. In the **Deploy model gtp-4o** window, leave everything in it's default setting and select **Deploy**.
+6. In the **Chat playground** page, select **Add your data** located near the bottom of the screen > **+ Add a data source**.
+7. In the **Select or add data source** window, select  the dropdown for **Select data source** and select **Upload files (preview)**.
+8. In the next page for **Data source**, ensure the dropdown for **Select data source** is set to **Upload files (preview)**
+       a. In the **Subscription** field, ensure the default value is selected.
+       b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resouurce will take a moment to deploy.
+       c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
+9. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**. Select a **Service name**> Ensure all fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will takea moment to deploy.
+10. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 4 above.
+11. Enter a name for the field **Enter the index name** > **Next**
+12. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
+13. Under the **Data management** section, leave everything as default and select **Next**.
+14. Under the**Data connection** select **API key** > **Next** > **Save and close**.
+15. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
+16. In the **Sample code** window select the drop down to the right of the first field and select **json**> switch to the **Key authentification**tab:
+    a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks. 
+
+       
 
 ## Task with subtasks
 
