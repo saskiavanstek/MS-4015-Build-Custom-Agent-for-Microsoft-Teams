@@ -93,30 +93,18 @@ Now let's, ...
 5. Navigate to **src/prompts/chat/skprompt.txt**
 6. Delete any text in the file and paste the following:
     "data_sources": [ 
-
-     { 
-
-            "type": "azure_search", 
-
-            "parameters": { 
-
-                 "endpoint": "AZURE-AI-SEARCH-ENDPOINT", 
-
-                 "index_name": "YOUR-INDEX_NAME", 
-
-                 "authentication": { 
-
-                       "type": "api_key", 
-
-                       "key": "AZURE-AI-SEARCH-KEY" 
-
-                   } 
-
-             } 
-
-       } 
-
-     ]  
+    { 
+        "type": "azure_search", 
+        "parameters": { 
+            "endpoint": "AZURE-AI-SEARCH-ENDPOINT", 
+            "index_name": "YOUR-INDEX_NAME", 
+            "authentication": { 
+                "type": "api_key", 
+                "key": "AZURE-AI-SEARCH-KEY" 
+            } 
+        } 
+    } 
+]
 7. In the code above, replace the following with the values you saved from the previous task:
 
    a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
