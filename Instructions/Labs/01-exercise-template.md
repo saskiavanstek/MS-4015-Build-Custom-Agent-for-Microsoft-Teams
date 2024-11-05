@@ -8,13 +8,13 @@ You can delete the module and edit index.md in the root of the repo to customize
 To enable GitHub page publishing, edit the Page settings for the repo and publish from the main branch
 -->
 
-# Exercise title <Create Azure OpenAI resource>
+# Create and test a Custom Agent
 
 In this exercise you will create an Azure OpenAI resource that serves as the foundation for creating your custom agent.
 
 This exercise should take approximately **XX** minutes to complete. <!-- update with estimated duration -->
 
-## Task <!-- Create Azure OpenAI resource -->
+##  Create Azure OpenAI resource 
 
 First, you need to ...
 
@@ -43,7 +43,7 @@ Select **Next**.
 10. **Result:** You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
 
 
-## Deploy a Chat model
+## Implement RAG for the Azure OpenAI model
 
 Now let's, ...
 
@@ -64,39 +64,71 @@ Now let's, ...
    
 10. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**. Select a **Service name**> Ensure all fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will takea moment to deploy.
 11. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 4 above.
-12. Enter a name for the field **Enter the index name** > **Next**.
+12. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somwhere accessible as you will need this in the upcoming tasks.
 13. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
 14. Under the **Data management** section, leave everything as default and select **Next**.
 15. Under the**Data connection** select **API key** > **Next** > **Save and close**.
 16. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
-17. In the **Sample code** window select the drop down to the right of the first field and select **json**> switch to the **Key authentification**tab:
+17. In the **Sample code** window select the drop down to the right of the first field and select **json** > switch to the **Key authentification**tab:
     
-    a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks. 
+    a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks.
 
-       
+ ## Create and test custom agent in Test Tool
 
-## Task with subtasks
+Now let's, ...
 
-Sometimes you might want to break a taak down into smaller chunks.
+1. Open **Visual Studio Code**.
+2. In the right hand side of the visual studio code window select the **Teams Toolkit** icon > seelct **Create a New App** > in the dropdown select **Custom Engine Agent** > **Basic AI Chatbot** > **JavaScript** > **Azure OpenAI** .
+3. In the blank box at the top of the screen, first enter :
 
-### Subtask 1
+   a. **API Key** from the previous task > **Enter**.
 
-1. Step 1
-1. Step 2
-1. Etc.
+   b. **Endpoint** from the previous task > **Enter**.
 
-### Subtask 2
+   c. For **Azure Open AI deployment name** type in **gpt-4o** > **Enter**.
 
-1. Step 1
-1. Step 2
-1. etc.
+   d. For **Choose the folder where your project room folder will be located**, select **Default folder**.
 
-## Clean up
+   e. For **Input application name** type in any name > **Enter**.
+5. Navigate to **src/prompts/chat/skprompt.txt**
+6. Delete any text in the file and paste the following:
+    "data_sources": [ 
 
-<!-- Good practice - especially as self-paced learners will be using their own subscriptions -->
-<!-- Delete this section if it is not needed -->
+     { 
 
-Now that you've finished the exercise, you should delete the cloud resources you've created to avoid unnecessary resource usage.
+            "type": "azure_search", 
 
-1. Step 1
-2. etc.
+            "parameters": { 
+
+                 "endpoint": "AZURE-AI-SEARCH-ENDPOINT", 
+
+                 "index_name": "YOUR-INDEX_NAME", 
+
+                 "authentication": { 
+
+                       "type": "api_key", 
+
+                       "key": "AZURE-AI-SEARCH-KEY" 
+
+                   } 
+
+             } 
+
+       } 
+
+     ]  
+7. In the code above, replace the following with the values you saved from the previous task:
+
+   a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
+
+   b. **index_name**  is the **Index name** from step 12 in the previous task.
+
+   c. **key** is the **Azure Search Resource Key** from the previous task.
+
+9.Go to **src/app/app.js file** and add the following variable inside **OpenAIModel** right after the line azureEndpoint: config.azureOpenAIEndpoint, : 
+
+    a. azureApiVersion: '2024-02-15-preview', 
+    
+10. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
+11.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. 
+12. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
