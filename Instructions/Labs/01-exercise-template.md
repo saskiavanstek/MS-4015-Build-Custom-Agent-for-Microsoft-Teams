@@ -33,6 +33,7 @@ First, you need to ...
    d. **Pricing tier**: Select the default value **Standard S0**.
    
 Select **Next**.
+
 6. Under the next page, in the **Network** tab, Select the option **All networks, incluing the internet, can access this resource.**
 Select **Next**.
 7. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
