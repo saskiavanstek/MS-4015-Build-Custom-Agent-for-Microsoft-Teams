@@ -25,18 +25,21 @@ First, you need to ...
 1. Under the page **Create Azure OpenAI** set the following fields:
    
    a. **Subscription** leave as the default value.
+   
    b. **Resource Group** : Press the dropdown and select the Resource Group option that already exists.
+   
    c. **Name** : Type in any name you choose.
+   
    d. **Pricing tier**: Select the default value **Standard S0**.
    
 Select **Next**.
-1. Under the next page, in the **Network** tab, Select the option **All networks, incluing the internet, can access this resource.**
+6. Under the next page, in the **Network** tab, Select the option **All networks, incluing the internet, can access this resource.**
 Select **Next**.
-1. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
+7. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
 Select **Next**.
-1. Under the next page, in the **Review + submit** tab, press **Create**.
-1. You will be taken to a page where this newly created Azure OpenAI resource is being created. You will see the words **Deployment in progress**. Wait for a few second for this resource to finish deploying. Once the resource is deployed, click on the button **Go to Resource**.
-1. Result: You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
+8. Under the next page, in the **Review + submit** tab, press **Create**.
+9. You will be taken to a page where this newly created Azure OpenAI resource is being created. You will see the words **Deployment in progress**. Wait for a few second for this resource to finish deploying. Once the resource is deployed, click on the button **Go to Resource**.
+10. Result: You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
 
 
 ## Next task
