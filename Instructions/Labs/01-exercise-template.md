@@ -92,7 +92,9 @@ Now let's, ...
    e. For **Input application name** type in any name > **Enter**.
 5. Navigate to **src/prompts/chat/skprompt.txt**
 6. Delete any text in the file and paste the following:
-    "data_sources": [ 
+
+```json
+"data_sources": [ 
     { 
         "type": "azure_search", 
         "parameters": { 
@@ -105,6 +107,8 @@ Now let's, ...
         } 
     } 
 ]
+```
+
 7. In the code above, replace the following with the values you saved from the previous task:
 
    a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
