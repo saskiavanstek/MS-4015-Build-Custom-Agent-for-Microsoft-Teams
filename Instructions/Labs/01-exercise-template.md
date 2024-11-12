@@ -65,8 +65,8 @@ Now let's, ...
    
 10. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to the default values. Click the dropdown value for **Resource Group** to select theonly option available. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
 11. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
-12. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somwhere accessible as you will need this in the upcoming tasks.
-13. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
+12. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somewhere accessible as you will need this in the upcoming tasks.
+13. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > **Open** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
 14. Under the **Data management** section, leave everything as default and select **Next**.
 15. Under the**Data connection** select **API key** > **Next** > **Save and close**.
 16. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
@@ -74,7 +74,7 @@ Now let's, ...
     
     a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks.
 
- ## Create and test custom agent in Test Tool
+ ## Create and test custom agent in Test Tool and Teams
 
 Now let's, ...
 
@@ -91,8 +91,23 @@ Now let's, ...
    d. For **Choose the folder where your project room folder will be located**, select **Default folder**.
 
    e. For **Input application name** type in any name > **Enter**.
-5. Navigate to **src/prompts/chat/skprompt.txt**
-6. Delete any text in the file and paste the following:
+
+   f. In the new VS Code window of the newley created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
+
+   g. Under the **Accounts** section, click **Sign in to Microsoft 365**. A new window in your browser will open. Login using the credentials provided.
+
+   h. Navigate back to the VS Code page of your app. You should now see a green check mark by the words **Custom App Upload Enabled** under **Accounts.
+
+   i. Under the **Accounts** section, click **Sign in to Azure**. Click **OK** on every pop up window. A new window in your browser will open. Login using the credentials provided.
+   
+4. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
+   skprompt.txtCopy 
+
+The following is a conversation with an AI assistant, who is an expert on answering questions over the given context. 
+
+Responses should be in a short journalistic style with no more than 80 words.  
+
+5. Navigate to **config.json** file under prompts/chat in the VS Code window of your app. Paste the following code in the brackets.
 
 ```json
 "data_sources": [ 
@@ -110,18 +125,21 @@ Now let's, ...
 ]
 ```
 
-7. In the code above, replace the following with the values you saved from the previous task:
+6. In the code above, replace the following with the values you saved from the previous task:
 
    a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
 
-   b. **index_name**  is the **Index name** from step 11 in the previous task.
+   b. **index_name**  is the **Index name** from step 12 in the previous task.
 
    c. **key** is the **Azure Search Resource Key** from the previous task.
 
-8. Go to **src/app/app.js file** and add the following variable inside **OpenAIModel** right after the line azureEndpoint: config.azureOpenAIEndpoint, : 
+7. Go to **src/app/app.js file** and add the following variable inside **OpenAIModel** right after the line azureEndpoint: config.azureOpenAIEndpoint, : 
 
     a. azureApiVersion: '2024-02-15-preview', 
     
-9. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
-10.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. 
-11. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
+8. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
+9.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. 
+10. Open a window in your edge browser and sign into **https://teams.microsoft.com/** using the credentials provided. After signing in, close out the browser.
+11. Navigate back toi the VS Code window for your app. Select the **Debug** button dropdown and select **Debug in Teams (Edge)** then press the green play button.
+12. A new window in your Edge browser will open. There should be a window with thetitle of your newly created app. Select **Add** > **Open**.
+13. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
