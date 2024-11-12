@@ -14,7 +14,7 @@ In this exercise you will create an Azure OpenAI resource that serves as the fou
 
 This exercise should take approximately **30** minutes to complete. <!-- update with estimated duration -->
 
-##  Create Azure OpenAI resource 
+##  Task 1: Create Azure OpenAI resource 
 
 First, you need to ...
 
@@ -22,7 +22,7 @@ First, you need to ...
 1. Sign into the azure portal using the credential provided to you in this lab environment.
 2. Click on **+ Create a resource** on the upper left hand  side of the screen.
 1. In the search box type in **azure openai** and press enter.
-1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press the **Create** button.
+1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press> **Create** > **Aure OpenAI**.
 1. Under the page **Create Azure OpenAI** set the following fields:
    
    a. **Subscription** leave as the default value.
@@ -44,7 +44,7 @@ Select **Next**.
 11. **Result:** You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
 
 
-## Implement RAG for the Azure OpenAI model
+## Task 2: Implement RAG for the Azure OpenAI model
 
 Now let's, ...
 
@@ -59,7 +59,7 @@ Now let's, ...
    
    a. In the **Subscription** field, ensure the default value is selected.
    
-    b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resource will take a moment to deploy.
+    b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values-choose the only value avaiable for **Resource group**. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resource will take a moment to deploy.
    
    c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
    
@@ -74,12 +74,12 @@ Now let's, ...
     
     a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks.
 
- ## Create and test custom agent in Test Tool and Teams
+ ## Task 3: Create and test custom agent in Test Tool and Teams
 
 Now let's, ...
 
 1. Open **Visual Studio Code**.
-2. In the right hand side of the visual studio code window select the **Teams Toolkit** icon > seelct **Create a New App** > in the dropdown select **Custom Engine Agent** (note: depending on the Teams Toolkit version, you may have to select **Custom Copilot**) > **Basic AI Chatbot** > **JavaScript** > **Azure OpenAI** .
+2. In the right hand side of the visual studio code window select the **Teams Toolkit** icon > select **Create a New App** > in the dropdown select **Custom Engine Agent** (note: depending on the Teams Toolkit version, you may have to select **Custom Copilot**) > **Basic AI Chatbot** > **JavaScript** > **Azure OpenAI** .
 3. In the blank box at the top of the screen, first enter :
 
    a. **API Key** from the previous task > **Enter**.
@@ -90,7 +90,7 @@ Now let's, ...
 
    d. For **Choose the folder where your project room folder will be located**, select **Default folder**.
 
-   e. For **Input application name** type in any name > **Enter**.
+   e. For **Input application name** type in any name > **Enter**> in the pop up winod select **Yes, I trust the authors**.
 
    f. In the new VS Code window of the newley created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
 
@@ -101,13 +101,11 @@ Now let's, ...
    i. Under the **Accounts** section, click **Sign in to Azure**. Click **OK** on every pop up window. A new window in your browser will open. Login using the credentials provided.
    
 4. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
-   skprompt.txtCopy 
+ "The following is a conversation with an AI assistant, who is an expert on answering questions over the given context. 
 
-The following is a conversation with an AI assistant, who is an expert on answering questions over the given context. 
+Responses should be in a short journalistic style with no more than 80 words." 
 
-Responses should be in a short journalistic style with no more than 80 words.  
-
-5. Navigate to **config.json** file under prompts/chat in the VS Code window of your app. Paste the following code in the brackets.
+5. Navigate to **config.json** file under prompts/chat in the VS Code window of your app. Delete the code currently present in the brackets and paste the following code in the brackets.
 
 ```json
 "data_sources": [ 
@@ -115,7 +113,8 @@ Responses should be in a short journalistic style with no more than 80 words.
         "type": "azure_search", 
         "parameters": { 
             "endpoint": "AZURE-AI-SEARCH-ENDPOINT", 
-            "index_name": "YOUR-INDEX_NAME", 
+            "index_name": "YOUR-INDEX_NAME",
+            "in_scope": false,
             "authentication": { 
                 "type": "api_key", 
                 "key": "AZURE-AI-SEARCH-KEY" 
@@ -125,21 +124,23 @@ Responses should be in a short journalistic style with no more than 80 words.
 ]
 ```
 
-6. In the code above, replace the following with the values you saved from the previous task:
+6. In the code above, replace the following with the values you saved from the previous task (note: the values must be in quotation marks):
 
    a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
 
-   b. **index_name**  is the **Index name** from step 11 in the previous task.
+   b. **index_name**  is the **Index name** from Task 2 step 11 in the previous task.
 
    c. **key** is the **Azure Search Resource Key** from the previous task.
 
 7. Go to **src/app/app.js file** and add the following variable inside **OpenAIModel** right after the line azureEndpoint: config.azureOpenAIEndpoint, : 
 
-    a. azureApiVersion: '2024-02-15-preview', 
+    a. azureApiVersion: '2024-02-15-preview',
+   
+8. **File** > **Save all**
     
-8. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
-9.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. 
-10. Open a window in your edge browser and sign into **https://teams.microsoft.com/** using the credentials provided. After signing in, close out the browser.
-11. Navigate back toi the VS Code window for your app. Select the **Debug** button dropdown and select **Debug in Teams (Edge)** then press the green play button.
-12. A new window in your Edge browser will open. There should be a window with thetitle of your newly created app. Select **Add** > **Open**.
-13. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
+9. Press **Ctrl+Shift+d** on your keyboard an a dropdown at the top left  will appear that has a green play button and the word Debug > Select the dropdown> select **Debug in Test Tool** > Press **F5**.
+10.Custom engine agent runs within the Debugging tool you have chosen, which opens in your browser. You can ask the bot any questions pertaining to the RAG data uploaded in Task 2 step 12.
+11. Navigate back to the VS Code window for your app. Select the **Debug** button dropdown and select **Debug in Teams (Edge)** then press **F5** or the gren play button.
+13. A new window in your Edge browser will open. You will be prompted to sign in. Use the login information provided to sign in. After successfully signing in, close the window.
+14. Repeat step 11 again. There should be a window with the title of your newly created app. Select **Add** > **Open**.
+15. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
