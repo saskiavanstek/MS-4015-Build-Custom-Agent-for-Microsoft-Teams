@@ -12,7 +12,7 @@ To enable GitHub page publishing, edit the Page settings for the repo and publis
 
 In this exercise you will create an Azure OpenAI resource that serves as the foundation for creating your custom agent.
 
-This exercise should take approximately **XX** minutes to complete. <!-- update with estimated duration -->
+This exercise should take approximately **30** minutes to complete. <!-- update with estimated duration -->
 
 ##  Create Azure OpenAI resource 
 
