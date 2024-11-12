@@ -35,13 +35,13 @@ First, you need to ...
    
 Select **Next**.
 
-6. Under the next page, in the **Network** tab, Select the option **All networks, including the internet, can access this resource.**
+7. Under the next page, in the **Network** tab, Select the option **All networks, including the internet, can access this resource.**
 Select **Next**.
-7. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
+8. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
 Select **Next**.
-8. Under the next page, in the **Review + submit** tab, press **Create**.
-9. You will be taken to a page where this newly created Azure OpenAI resource is being created. You will see the words **Deployment in progress**. Wait for a few second for this resource to finish deploying. Once the resource is deployed, click on the button **Go to Resource**.
-10. **Result:** You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
+9. Under the next page, in the **Review + submit** tab, press **Create**.
+10. You will be taken to a page where this newly created Azure OpenAI resource is being created. You will see the words **Deployment in progress**. Wait for a few second for this resource to finish deploying. Once the resource is deployed, click on the button **Go to Resource**.
+11. **Result:** You will now be in the page with newly created Azure OpenAI resource. You can verify by checking the name of the resource in the top left hand corner of the page. This name should match the name you chose for step 5c above.
 
 
 ## Implement RAG for the Azure OpenAI model
@@ -63,14 +63,14 @@ Now let's, ...
    
    c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
    
-10. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to the default values. Click the dropdown value for **Resource Group** to select theonly option available. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
-11. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
-12. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somewhere accessible as you will need this in the upcoming tasks.
-13. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > **Open** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
-14. Under the **Data management** section, leave everything as default and select **Next**.
-15. Under the**Data connection** select **API key** > **Next** > **Save and close**.
-16. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
-17. In the **Sample code** window select the drop down to the right of the first field and select **json** > switch to the **Key authentification**tab:
+9. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to the default values. Click the dropdown value for **Resource Group** to select theonly option available. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
+10. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
+11. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somewhere accessible as you will need this in the upcoming tasks.
+12. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > **Open** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
+13. Under the **Data management** section, leave everything as default and select **Next**.
+14. Under the**Data connection** select **API key** > **Next** > **Save and close**.
+15. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
+16. In the **Sample code** window select the drop down to the right of the first field and select **json** > switch to the **Key authentification**tab:
     
     a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks.
 
@@ -129,7 +129,7 @@ Responses should be in a short journalistic style with no more than 80 words.
 
    a. **AZURE-AI-SEARCH-ENDPOINT** is the **Endpoint** from the previous task.
 
-   b. **index_name**  is the **Index name** from step 12 in the previous task.
+   b. **index_name**  is the **Index name** from step 11 in the previous task.
 
    c. **key** is the **Azure Search Resource Key** from the previous task.
 
