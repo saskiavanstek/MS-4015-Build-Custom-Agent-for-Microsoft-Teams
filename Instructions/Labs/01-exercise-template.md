@@ -19,7 +19,8 @@ This exercise should take approximately **XX** minutes to complete. <!-- update 
 First, you need to ...
 
 1. Navigate to **https://portal.azure.com** in your edge browser.
-1. Sign into the aure portal using the credential provided to you in this lab environment.
+1. Sign into the azure portal using the credential provided to you in this lab environment.
+2. Click on **+ Create a resource** on the upper left hand  side of the screen.
 1. In the search box type in **azure openai** and press enter.
 1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press the **Create** button.
 1. Under the page **Create Azure OpenAI** set the following fields:
