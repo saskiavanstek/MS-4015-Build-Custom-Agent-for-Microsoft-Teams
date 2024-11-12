@@ -79,7 +79,7 @@ Now let's, ...
 Now let's, ...
 
 1. Open **Visual Studio Code**.
-2. In the right hand side of the visual studio code window select the **Teams Toolkit** icon > seelct **Create a New App** > in the dropdown select **Custom Engine Agent** (note: deopending on the Teams Toolkit version, ytou may have to select **Custom Copilot**) > **Basic AI Chatbot** > **JavaScript** > **Azure OpenAI** .
+2. In the right hand side of the visual studio code window select the **Teams Toolkit** icon > seelct **Create a New App** > in the dropdown select **Custom Engine Agent** (note: depending on the Teams Toolkit version, you may have to select **Custom Copilot**) > **Basic AI Chatbot** > **JavaScript** > **Azure OpenAI** .
 3. In the blank box at the top of the screen, first enter :
 
    a. **API Key** from the previous task > **Enter**.
