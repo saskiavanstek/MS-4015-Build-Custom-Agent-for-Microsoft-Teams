@@ -63,7 +63,7 @@ Now let's, ...
    
    c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
    
-10. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**. Input a **Service name**> Ensure all fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
+10. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to the default values. Click the dropdown value for **Resource Group** to select theonly option available. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
 11. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 4 above.
 12. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somwhere accessible as you will need this in the upcoming tasks.
 13. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
