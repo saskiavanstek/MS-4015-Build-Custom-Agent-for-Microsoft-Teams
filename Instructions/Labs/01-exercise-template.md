@@ -14,6 +14,8 @@ In this exercise you will create an Azure OpenAI resource that serves as the fou
 
 This exercise should take approximately **30** minutes to complete. <!-- update with estimated duration -->
 
+**Note:** Learners are expected to complete this lab on their own environments.
+
 ##  Task 1: Create Azure OpenAI resource 
 
 First, you need to ...
@@ -23,15 +25,15 @@ First, you need to ...
 2. Click on **+ Create a resource** on the upper left hand  side of the screen.
 1. In the search box type in **azure openai** and press enter.
 1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press> **Create** > **Aure OpenAI**.
-1. Under the page **Create Azure OpenAI** set the following fields:
+1. Under the page **Create Azure OpenAI** set the following fields: **Note:** As this lab is meant to be completed on the learner's own environment, learners will have to use their own discretion when selecting values for fields **Subscription** , **Pricing Tier** and **Resource Group**.
    
-   a. **Subscription** leave as the default value.
+   a. **Subscription** Use your own discretion when filling this field.
    
-   b. **Resource Group** : Press the dropdown and select the Resource Group option that already exists.
+   b. **Resource Group** : Use your own discretion when filling this field.
    
    c. **Name** : Type in any name you choose.
    
-   d. **Pricing tier**: Select the default value **Standard S0**.
+   d. **Pricing tier**: the default value  is **Standard S0**, but Use your own discretion when filling this field..
    
 Select **Next**.
 
@@ -63,7 +65,7 @@ Now let's, ...
    
    c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
    
-9. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to the default values. Click the dropdown value for **Resource Group** to select theonly option available. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
+9. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to values of your choosings. **Note:** As this lab is meant to be completed on the learner's own environment, learners will have to use their own discretion when selecting values for fields **Subscription** and, **Resource Group**. Click the dropdown value for **Resource Group** to select the option of your choosing. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
 10. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
 11. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somewhere accessible as you will need this in the upcoming tasks.
 12. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > **Open** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
