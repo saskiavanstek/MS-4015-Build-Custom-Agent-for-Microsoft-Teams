@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/f3c71eec-02da-4d04-912d-f884ee1bcb2c)---
 lab:
     title: 'Create a Custom Agent'
 ---
@@ -96,13 +96,25 @@ Now let's, ...
 
    f. In the new VS Code window of the newley created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
 
+   **Note:** steps g-i should be for completed for a user's environment that does not have admin access to the Microsoft Teams Admin Center. If users have a M365 tenant withadmin access perform steps j-m instead.
+
    g. Under the **Accounts** section, click **Sign in to Microsoft 365**. A new window in your browser will open. Login using the credentials provided.
 
    h. Navigate back to the VS Code page of your app. You should now see a green check mark by the words **Custom App Upload Enabled** under **Accounts.
 
    i. Under the **Accounts** section, click **Sign in to Azure**. Click **OK** on every pop up window. A new window in your browser will open. Login using the credentials provided.
+
+   For users who have a M365 tenant with admin access to the Microsoft Teams Admin Center, please perform the following steps instead of steps g-i above:
+
+   j. Sign into https://admin.teams.microsoft.com with your admin credentials.
+
+   k. Go to **Teams apps** on the sidebar, and then select **Setup policies**.
+
+   l. Select the **Global (Org-wide default)** policy, and then turn on the **Upload custom apps** toggle.
+
+   m. Scroll down and select the **Save** button to save your changes. Your tenant will now allow custom app sideloading. 
    
-4. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
+5. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
  "The following is a conversation with an AI assistant, who is an expert on answering questions over the given context. 
 
 Responses should be in a short journalistic style with no more than 80 words." 
