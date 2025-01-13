@@ -33,7 +33,7 @@ First, you need to ...
    
    c. **Name** : Type in any name you choose.
    
-   d. **Pricing tier**: the default value  is **Standard S0**, but Use your own discretion when filling this field..
+   d. **Pricing tier**: the default value  is **Standard S0**, but Use your own discretion when filling this field.
    
 Select **Next**.
 
