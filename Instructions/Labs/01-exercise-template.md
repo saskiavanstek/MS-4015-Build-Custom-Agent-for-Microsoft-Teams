@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f3c71eec-02da-4d04-912d-f884ee1bcb2c)---
+
 lab:
     title: 'Create a Custom Agent'
 ---
