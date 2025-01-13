@@ -1,6 +1,6 @@
 
 lab:
-    title: 'Create a Custom Agent'
+'Create a Custom Agent'
 ---
 <!--
 Edit the metadata above to manage the list of exercises in the home page of the GitHub site that gets generated.
@@ -48,7 +48,7 @@ Select **Next**.
 
 ## Task 2: Implement RAG for the Azure OpenAI model
 
-Now let's, ...
+In this task, you will learn how to implement RAG using a data source for your own test environment.
 
 1. In the page for your newley created Azure OpenAI resource, click **Go to Azure OpenAI Studio** in the ribbon at the top of the page.
 2. In the new page titled **Welcome to Azure OpenAI service**, click on **Chat** on the navigation menu to the left of the screen.
@@ -78,7 +78,7 @@ Now let's, ...
 
  ## Task 3: Create and test custom agent in Test Tool and Teams
 
-Now let's, ...
+In this task you will create the custom agent and test the agent.
 
 1. Open **Visual Studio Code**.
 2. In the right hand side of the visual studio code window select the **Teams Toolkit** icon > select **Create a New App** > in the dropdown select **Custom Engine Agent** (note: depending on the Teams Toolkit version, you may have to select **Custom Copilot**) > **Basic AI Chatbot** > **JavaScript** > **Azure OpenAI** .
