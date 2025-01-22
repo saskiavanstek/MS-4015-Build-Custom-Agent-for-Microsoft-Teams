@@ -156,4 +156,10 @@ Responses should be in a short journalistic style with no more than 80 words."
 11. Navigate back to the VS Code window for your app. Select the **Debug** button dropdown and select **Debug in Teams (Edge)** then press **F5** or the gren play button.
 13. A new window in your Edge browser will open. You will be prompted to sign in. Use the login information provided to sign in. After successfully signing in, close the window.
 14. Repeat step 11 again. There should be a window with the title of your newly created app. Select **Add** > **Open**.
-15. Congrats! You can now ask the agent any question pretaining to the RAG data files. 
+15. Congrats! You can now ask the agent any question pretaining to the RAG data files.
+16. **Note:** As this agent was made for educational purposes using your own subscription, users should proceed with deleting the agent after completion of this lab. To delete a custom agent in Microsoft Teams, you can:
+- Select the agent you want to delete, then choose the **More options icon (…)** and select **Delete**.
+- Remove the agent from a chat by selecting the ellipses in the thread and choosing **Manage Apps**.
+- From the authoring experience of an agent, select the **ellipses (...)** and choose **Delete**.
+
+**END OF LAB**
