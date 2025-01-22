@@ -21,7 +21,7 @@ This exercise should take approximately **30** minutes to complete. <!-- update 
 First, you need to ...
 
 1. Navigate to **https://portal.azure.com** in your edge browser.
-1. Sign into the azure portal using the credential provided to you in this lab environment.
+1. Sign into the azure portal.
 2. Click on **+ Create a resource** on the upper left hand  side of the screen.
 1. In the search box type in **azure openai** and press enter.
 1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press> **Create** > **Aure OpenAI**.
@@ -50,14 +50,13 @@ Select **Next**.
 
 In this task, you will learn how to implement RAG using a data source for your own test environment.
 
-1. In the page for your newley created Azure OpenAI resource, click **Go to Azure OpenAI Studio** in the ribbon at the top of the page.
-2. In the new page titled **Welcome to Azure OpenAI service**, click on **Chat** on the navigation menu to the left of the screen.
-3. In the new page titled **Chat playground**, under **Setup**, select **+ Create new deployment** > **From base models**.
-4. In the pop up window titled **Select a chat completion model** scroll down and select the option **gpt-4o** > **Confirm**.
-5. In the **Deploy model gtp-4o** window, leave everything in it's default setting and select **Deploy**.
-6. In the **Chat playground** page, select **Add your data** located near the bottom of the screen > **+ Add a data source**.
-7. In the **Select or add data source** window, select  the dropdown for **Select data source** and select **Upload files (preview)**.
-8. In the next page for **Data source**, ensure the dropdown for **Select data source** is set to **Upload files (preview)**
+1. In the page for your newley created Azure OpenAI resource, click **Go to Azure AI Foundry portal** in the ribbon at the top of the page.
+2. In the new page titled **Chat playground**, under **Setup**, select **+ Create new deployment** > **From base models**.
+3. In the pop up window titled **Select a chat completion model** scroll down and select the option **gpt-4o** > **Confirm**.
+4. In the **Deploy model gtp-4o** window, leave everything in it's default setting and select **Deploy**.
+5. In the **Chat playground** page, select **Add your data** located near the bottom of the screen > **+ Add a data source**.
+6. In the **Select or add data source** window, select  the dropdown for **Select data source** and select **Upload files (preview)**.
+7. In the next page for **Data source**, ensure the dropdown for **Select data source** is set to **Upload files (preview)**
    
    a. In the **Subscription** field, ensure the default value is selected.
    
@@ -65,14 +64,14 @@ In this task, you will learn how to implement RAG using a data source for your o
    
    c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
    
-9. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to values of your choosings. **Note:** As this lab is meant to be completed on the learner's own environment, learners will have to use their own discretion when selecting values for fields **Subscription** and, **Resource Group**. Click the dropdown value for **Resource Group** to select the option of your choosing. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
-10. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
-11. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somewhere accessible as you will need this in the upcoming tasks.
-12. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > **Open** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
-13. Under the **Data management** section, leave everything as default and select **Next**.
-14. Under the**Data connection** select **API key** > **Next** > **Save and close**.
-15. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
-16. In the **Sample code** window select the drop down to the right of the first field and select **json** > switch to the **Key authentification**tab:
+8. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to values of your choosings. **Note:** As this lab is meant to be completed on the learner's own environment, learners will have to use their own discretion when selecting values for fields **Subscription** and, **Resource Group**. Click the dropdown value for **Resource Group** to select the option of your choosing. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
+9. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
+10. Enter a name for the field **Enter the index name** > **Next**. Copy and paste this name somewhere accessible as you will need this in the upcoming tasks.
+11. In the **Upload files** section, select **Browse for a file** > In the file explorer, navigate to **Documents** > select all three files: **ContosoAI ChipEnhance Perks Program.docx**, **ContosoAI Insurance Plans.docx**, and **Overview of ContosoAI.docx** > **Open** > the three file should now be present in the **Upload files** page of the window > select **Upload Files** > **Next**.
+12. Under the **Data management** section, leave everything as default and select **Next**.
+13. Under the**Data connection** select **API key** > **Next** > **Save and close**.
+14. In the **Chat playground** window, select **View code** which is in the ribbon at the top left of the window.
+15. In the **Sample code** window select the drop down to the right of the first field and select **json** > switch to the **Key authentification**tab:
     
     a. Copy and paste the following values, as you will need them in the upcoming tasks: **Endpoint**, **API key**, and **Azure Search Resource Key**. You can also leave this window open to collect these values for the upcoming tasks.
 
