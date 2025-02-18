@@ -12,9 +12,11 @@ To enable GitHub page publishing, edit the Page settings for the repo and publis
 
 In this exercise you will create an Azure OpenAI resource that serves as the foundation for creating your custom agent.
 
-This exercise should take approximately **30** minutes to complete. <!-- update with estimated duration -->
+This exercise should take approximately **60** minutes to complete. <!-- update with estimated duration -->
 
-**Note:** Learners are expected to complete this lab on their own environments.
+**Note:** Learners can complete this lab with these options
+1) The Skillable lab environment
+2) Learners are expected to complete this lab on their own environments for all other ALHs.
 
 ##  Task 1: Create Azure OpenAI resource 
 
@@ -24,8 +26,10 @@ First, you need to ...
 1. Sign into the azure portal.
 2. Click on **+ Create a resource** on the upper left hand  side of the screen.
 1. In the search box type in **azure openai** and press enter.
-1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labled **Create**. Press> **Create** > **Aure OpenAI**.
-1. Under the page **Create Azure OpenAI** set the following fields: **Note:** As this lab is meant to be completed on the learner's own environment, learners will have to use their own discretion when selecting values for fields **Subscription** , **Pricing Tier** and **Resource Group**.
+1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labeled **Create**. Press> **Create** > **Aure OpenAI**.
+1. Under the page **Create Azure OpenAI** set the following fields:
+
+**Note:** For learners using their own environment, learners will have to use their own discretion when selecting values for fields **Subscription** , **Pricing Tier** and **Resource Group**. For learners using the Skillable lab environment, select the default values for the fields in steps a-d below.
    
    a. **Subscription** Use your own discretion when filling this field.
    
@@ -39,7 +43,7 @@ Select **Next**.
 
 7. Under the next page, in the **Network** tab, Select the option **All networks, including the internet, can access this resource.**
 Select **Next**.
-8. Under the next pagein the **Tags** tab, leave the Name and Value fields blank.
+8. Under the next page in the **Tags** tab, leave the Name and Value fields blank.
 Select **Next**.
 9. Under the next page, in the **Review + submit** tab, press **Create**.
 10. You will be taken to a page where this newly created Azure OpenAI resource is being created. You will see the words **Deployment in progress**. Wait for a few second for this resource to finish deploying. Once the resource is deployed, click on the button **Go to Resource**.
@@ -57,16 +61,18 @@ In this task, you will learn how to implement RAG using a data source for your o
 5. In the **Chat playground** page, select **Add your data** located near the bottom of the screen > **+ Add a data source**.
 6. In the **Select or add data source** window, select  the dropdown for **Select data source** and select **Upload files (preview)**.
 7. In the next page for **Data source**, ensure the dropdown for **Select data source** is set to **Upload files (preview)**
-   
+
+**Notes:** For learners using their own environment, users may have to use your own discretion when filling out fields for steps a-c below. For Learners using the Skillable environment, follow use the default values as instructed in steps a-b below. 
+  
    a. In the **Subscription** field, ensure the default value is selected.
    
-    b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values-choose the only value avaiable for **Resource group**. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resource will take a moment to deploy.
+   b. In the **Select Azure Blob storage resource** field, select **Create a new Azure Blob storage resource** > in the new window titled **Create a storage account**, under the **Basics** tab, ensure the fields **Subscription** and **Resource group** are set to the default values-choose the only value available for **Resource group**. Under **Instance details**, set a name for **Storage account name**. Leave the rest of the fields as is. Select **Review + create**. Under the **Review + create** tab, select the **Create** button. The Azure Blob Storage resource will take a moment to deploy.
    
    c. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step b above. Select the button **Turn on CORS**.
    
-8. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to values of your choosings.
+8. For the field **Select Azure AI Search resource**, select  **Create a new Azure AI Search resource**.  Ensure the fields **Subscription** and **Resource group** are set to values of your choosing.
 
-   **Note:** As this lab is meant to be completed on the learner's own environment, learners will have to use their own discretion when selecting values for fields **Subscription** and, **Resource Group**.
+   **Note:** For learners using their on environment, please use your own discretion when selecting values for fields **Subscription** and, **Resource Group**.
 
 9. Click the dropdown value for **Resource Group** to select the option of your choosing. Input a **Service name**> Ensure all other fields are set to it's default values > select **Review + create** > **Create**. The Azure AI Search resource will take a moment to deploy.
 10. Navigate back to the window for **Chat playground**. Select the refresh button next to the field **Select Azure Blob storage resource** > select the resource you made in step 9 above.
@@ -95,11 +101,12 @@ In this task you will create the custom agent and test the agent.
 
    d. For **Choose the folder where your project room folder will be located**, select **Default folder**.
 
-   e. For **Input application name** type in any name > **Enter**> in the pop up winod select **Yes, I trust the authors**.
+   e. For **Input application name** type in any name > **Enter**> in the pop up window select **Yes, I trust the authors**.
 
-   f. In the new VS Code window of the newley created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
+   f. In the new VS Code window of the newly created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
 
-   **Note:** steps g-i should be for completed for a user's environment that does not have admin access to the Microsoft Teams Admin Center. If users have a M365 tenant withadmin access perform steps j-m instead.
+   **Note:** steps g-i should be for completed for a user's environment that does not have admin access to the Microsoft Teams Admin Center and/or for Learner's using the Skillable environment.
+  For Learners with their own environments, perform steps j-m instead.
 
    g. Under the **Accounts** section, click **Sign in to Microsoft 365**. A new window in your browser will open. Login using the credentials provided.
 
@@ -107,7 +114,7 @@ In this task you will create the custom agent and test the agent.
 
    i. Under the **Accounts** section, click **Sign in to Azure**. Click **OK** on every pop up window. A new window in your browser will open. Login using the credentials provided.
 
-   For users who have a M365 tenant with admin access to the Microsoft Teams Admin Center, please perform the following steps instead of steps g-i above:
+   For users who have an M365 tenant license with admin access to the Microsoft Teams Admin Center, please perform the following steps instead of steps g-i above:
 
    j. Sign into https://admin.teams.microsoft.com with your admin credentials.
 
@@ -117,7 +124,7 @@ In this task you will create the custom agent and test the agent.
 
    m. Scroll down and select the **Save** button to save your changes. Your tenant will now allow custom app sideloading. 
    
-5. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
+4. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
  "The following is a conversation with an AI assistant, who is an expert on answering questions over the given context. 
 
 Responses should be in a short journalistic style with no more than 80 words." 
@@ -160,10 +167,13 @@ Responses should be in a short journalistic style with no more than 80 words."
 11. Navigate back to the VS Code window for your app. Select the **Debug** button dropdown and select **Debug in Teams (Edge)** then press **F5** or the gren play button.
 13. A new window in your Edge browser will open. You will be prompted to sign in. Use the login information provided to sign in. After successfully signing in, close the window.
 14. Repeat step 11 again. There should be a window with the title of your newly created app. Select **Add** > **Open**.
-15. Congrats! You can now ask the agent any question pretaining to the RAG data files.
-16. **Note:** As this agent was made for educational purposes using your own subscription, users should proceed with deleting the agent after completion of this lab. To delete a custom agent in Microsoft Teams, you can:
+15. Congrats! You can now ask the agent any question pertaining to the RAG data files.
+16. **Note:** For Learners completing this lab on their own environment, this agent was made for educational purposes using your own subscription, users should proceed with deleting the agent after completion of this lab. To delete a custom agent in Microsoft Teams, you can:
 - Select the agent you want to delete, then choose the **More options icon (…)** and select **Delete**.
 - Remove the agent from a chat by selecting the ellipses in the thread and choosing **Manage Apps**.
-- From the authoring experience of an agent, select the **ellipses (...)** and choose **Delete**.
+- From the authoring experience of an agent, select the **ellipses (...)** and choose **Delete**.- From the authoring experience of an agent, select the **ellipses (...)** and choose **Delete**.
+
+**END OF LAB**
+
 
 **END OF LAB**
