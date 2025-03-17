@@ -15,7 +15,7 @@ In this exercise you will create an Azure OpenAI resource that serves as the fou
 This exercise should take approximately **60** minutes to complete. <!-- update with estimated duration -->
 
 **Note:** Learners can complete this lab with these options
-1) The Skillable lab environment
+1) A lab environment provided for the learners.
 2) Learners are expected to complete this lab on their own environments for all other ALHs.
 
 ##  Task 1: Create Azure OpenAI resource 
@@ -29,7 +29,7 @@ First, you need to ...
 1. A result called **Azure OpenAI** should appear as an option. At the bottom left hand corner of this option is a button labeled **Create**. Press> **Create** > **Aure OpenAI**.
 1. Under the page **Create Azure OpenAI** set the following fields:
 
-**Note:** For learners using their own environment, learners will have to use their own discretion when selecting values for fields **Subscription** , **Pricing Tier** and **Resource Group**. For learners using the Skillable lab environment, select the default values for the fields in steps a-d below.
+**Note:** For learners using their own environment, learners will have to use their own discretion when selecting values for fields **Subscription** , **Pricing Tier** and **Resource Group**. For learners using the provided lab environment, select the default values for the fields in steps a-d below.
    
    a. **Subscription** Use your own discretion when filling this field.
    
@@ -62,7 +62,7 @@ In this task, you will learn how to implement RAG using a data source for your o
 6. In the **Select or add data source** window, select  the dropdown for **Select data source** and select **Upload files (preview)**.
 7. In the next page for **Data source**, ensure the dropdown for **Select data source** is set to **Upload files (preview)**
 
-**Notes:** For learners using their own environment, users may have to use your own discretion when filling out fields for steps a-c below. For Learners using the Skillable environment, follow use the default values as instructed in steps a-b below. 
+**Notes:** For learners using their own environment, users may have to use your own discretion when filling out fields for steps a-c below. For Learners using the provided lab environment, follow use the default values as instructed in steps a-b below. 
   
    a. In the **Subscription** field, ensure the default value is selected.
    
@@ -105,7 +105,7 @@ In this task you will create the custom agent and test the agent.
 
    f. In the new VS Code window of the newly created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
 
-   **Note:** steps g-i should be for completed for a user's environment that does not have admin access to the Microsoft Teams Admin Center and/or for Learner's using the Skillable environment.
+   **Note:** steps g-i should be for completed for a user's environment that does not have admin access to the Microsoft Teams Admin Center and/or for Learner's using the provided lab environment.
   For Learners with their own environments, perform steps j-m instead.
 
    g. Under the **Accounts** section, click **Sign in to Microsoft 365**. A new window in your browser will open. Login using the credentials provided.
