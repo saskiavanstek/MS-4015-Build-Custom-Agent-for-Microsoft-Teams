@@ -31,9 +31,9 @@ First, you need to ...
 
 **Note:** For learners using their own environment, learners will have to use their own discretion when selecting values for fields **Subscription** , **Pricing Tier** and **Resource Group**. For learners using the provided lab environment, select the default values for the fields in steps a-d below.
    
-   a. **Subscription** Use your own discretion when filling this field.
+   a. **Subscription** Azure Subscription -- IT-M365 Training.
    
-   b. **Resource Group** : Use your own discretion when filling this field.
+   b. **Resource Group** : Use RG-MS4015-StudentXX (Where XX is your studentnumber).
    
    c. **Name** : Type in any name you choose.
    
@@ -106,23 +106,13 @@ In this task you will create the custom agent and test the agent.
    f. In the new VS Code window of the newly created app from steps a-f above, navigate to the **Teams Toolkit** icon on the left hand side of the screen.
 
    **Note:** steps g-i should be for completed for a user's environment that does not have admin access to the Microsoft Teams Admin Center and/or for Learner's using the provided lab environment.
-  For Learners with their own environments, perform steps j-m instead.
+
 
    g. Under the **Accounts** section, click **Sign in to Microsoft 365**. A new window in your browser will open. Login using the credentials provided.
 
    h. Navigate back to the VS Code page of your app. You should now see a green check mark by the words **Custom App Upload Enabled** under **Accounts.
 
    i. Under the **Accounts** section, click **Sign in to Azure**. Click **OK** on every pop up window. A new window in your browser will open. Login using the credentials provided.
-
-   For users who have an M365 tenant license with admin access to the Microsoft Teams Admin Center, please perform the following steps instead of steps g-i above:
-
-   j. Sign into https://admin.teams.microsoft.com with your admin credentials.
-
-   k. Go to **Teams apps** on the sidebar, and then select **Setup policies**.
-
-   l. Select the **Global (Org-wide default)** policy, and then turn on the **Upload custom apps** toggle.
-
-   m. Scroll down and select the **Save** button to save your changes. Your tenant will now allow custom app sideloading. 
    
 4. Navigate to **src/prompts/chat/skprompt.txt** in the VS Code window of your app. Delete any text in the file and paste the following:
  "The following is a conversation with an AI assistant, who is an expert on answering questions over the given context. 
